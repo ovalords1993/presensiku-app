@@ -336,4 +336,5 @@ TURNSTILE_SECRET_KEY=your-turnstile-secret-key
 
 ## 📄 Lisensi
 
-Proyek ini dilisensikan di bawah **MIT License** — Anda bebas menggunakan, memodifikasi, dan mendistribusikan kode ini untuk kepentingan komersial maupun non-komersial.
+Proyek ini dilisensikan di bawah **MIT License** — Anda bebas menggunakan, memodifikasi, dan mendistribusikan kode ini untuk kepentingan komersial maupun non-komersial.#   p r e s e n s i k u - a p p  
+ 
