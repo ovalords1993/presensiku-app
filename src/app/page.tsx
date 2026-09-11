@@ -44,7 +44,7 @@ export default function Home() {
               Presensi
             </a>
             <a
-              href="/admin"
+              href="/login"
               className="rounded-full bg-indigo-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-400"
             >
               Masuk Dashboard
@@ -55,50 +55,51 @@ export default function Home() {
         <section className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-indigo-300">
-              Multi-Tenant Attendance Platform
+              Presensiku Platform
             </p>
             <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-              Presensi sekolah modern untuk seluruh peran.
+              Presensi sekolah modern untuk admin, guru, murid, dan orang tua.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-slate-300">
-              Proyek ini memulai struktur inti aplikasi Presensiku: landing page,
-              dashboard per role, dan alur navigasi utama sesuai konsep README.
+              Versi saat ini sudah mencakup landing page, dashboard multi-role,
+              login demo, integrasi Supabase, API attendance, dan fitur presensi
+              manual serta approval izin untuk admin sekolah.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/presensi"
+                href="/login"
                 className="rounded-xl bg-indigo-500 px-5 py-3 font-medium text-white transition hover:bg-indigo-400"
               >
-                Coba Presensi
+                Masuk ke Aplikasi
               </a>
               <a
                 href="/admin"
                 className="rounded-xl border border-slate-700 bg-slate-900 px-5 py-3 font-medium text-slate-200 transition hover:border-slate-500"
               >
-                Lihat Admin Demo
+                Lihat Dashboard Admin
               </a>
             </div>
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-2xl shadow-indigo-950/30">
-            <h2 className="text-xl font-semibold">Fitur inti</h2>
+            <h2 className="text-xl font-semibold">Status implementasi</h2>
             <ul className="mt-5 space-y-4 text-sm text-slate-300">
               <li className="flex gap-3">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                Multi-tenant SaaS routing per sekolah.
+                Dashboard multi-role sudah tersedia untuk admin, guru, murid, dan super admin.
               </li>
               <li className="flex gap-3">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                Presensi dengan selfie, QR, dan geofencing.
+                Integrasi Supabase live aktif dengan fallback data mock untuk pengembangan lokal.
               </li>
               <li className="flex gap-3">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                Dashboard per role dan permission matrix.
+                Fitur presensi manual, approval izin, dan API attendance sudah dibuat.
               </li>
               <li className="flex gap-3">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                PWA-ready dan siap dikembangkan lebih lanjut.
+                PWA manifest, ikon, dan konfigurasi deployment sudah siap digunakan.
               </li>
             </ul>
           </div>
