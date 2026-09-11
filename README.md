@@ -7,7 +7,19 @@
 ![PWA](https://img.shields.io/badge/PWA-Ready-5A0FC8?style=for-the-badge&logo=pwa)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-**Presensiku** adalah platform *Progressive Web App* (PWA) presensi sekolah multi-tenant berbasis SaaS. Berjalan di atas infrastruktur *Modern Edge Computing* terkini, aplikasi ini dirancang untuk kecepatan latensi rendah, fleksibilitas metode absensi, keandalan isolasi data multi-sekolah, notifikasi *real-time* ke orang tua tanpa biaya pesan, serta efisiensi biaya **100% Free & Legal Tier Strategy** hingga melayani puluhan ribu siswa secara simultan.
+**Presensiku** adalah platform *Progressive Web App* (PWA) presensi sekolah berbasis SaaS yang sudah mulai dikembangkan menjadi aplikasi multi-role dengan integrasi Supabase. Versi saat ini sudah mencakup struktur inti aplikasi, dashboard per role, data source live/mock, serta alur login dan presensi manual yang dapat dipakai untuk pengembangan lebih lanjut.
+
+## Status Proyek Saat Ini
+
+Berikut status implementasi yang sudah ada pada kode saat ini:
+
+* ✅ Dashboard utama dan navigasi role: `admin`, `guru`, `murid`, `super-admin`
+* ✅ Halaman login dan session demo berdasarkan localStorage
+* ✅ Integrasi Supabase live dengan fallback mock data
+* ✅ API `attendance`, `students`, `health`, dan `seed`
+* ✅ Fitur presensi manual dan panel persetujuan izin di dashboard admin
+* ✅ Manifest PWA, ikon, dan file deployment `vercel.json`
+* ⚠️ Fitur lanjutan seperti multi-tenant routing penuh, push notification real-time, geofencing advanced, dan billing SaaS masih perlu dikembangkan lebih lanjut
 
 ---
 
@@ -28,18 +40,24 @@
 
 ---
 
-## ✨ Fitur Utama & Keunggulan
+## ✨ Fitur yang Sudah Ada Saat Ini
 
-* **Multi-Tenant SaaS Architecture**: Isolasi data ketat antar-sekolah menggunakan PostgreSQL *Row Level Security* (RLS).
-* **Multi-Method Attendance Engine**:
-  * **Selfie + Geofencing**: Deteksi lokasi GPS server-side + upload foto terkompresi.
-  * **Dynamic QR Code**: QR Token berubah tiap 5-10 detik (Anti-screenshot).
-  * **RFID / Tap Card Reader**: Integrasi terminal fisik berbasis WebSerial/API.
-  * **Delegated Manual Attendance**: Akses fleksibel bagi Guru Piket atau Karyawan khusus untuk input presensi manual.
-* **Unlimited PWA Push Notification**: Notifikasi langsung ke HP orang tua saat siswa presensi tanpa biaya kirim pesan API.
-* **Granular Permission Control**: Admin Sekolah dapat membagikan izin khusus (*permissions*) kepada peran tertentu tanpa menaikkan struktur role dasar.
-* **Offline-First PWA**: Terinstal layaknya aplikasi native Android/iOS, cepat dimuat, dan hemat data internet.
-* **Audit Trail System**: Log permanen (*append-only*) untuk merekam setiap aktivitas perbaikan data presensi manual.
+* **Multi-role dashboard**: halaman `admin`, `guru`, `murid`, dan `super-admin` sudah dibuat.
+* **Login & session management**: alur login demo dan session berbasis localStorage sudah diterapkan.
+* **Supabase integration**: aplikasi mampu membaca data dari Supabase bila environment variable sudah diisi, dengan fallback ke data mock saat belum siap.
+* **Attendance APIs**: endpoint `/api/attendance`, `/api/students`, `/api/health`, dan `/api/seed` sudah tersedia.
+* **Manual attendance**: admin dapat menambahkan presensi manual dari dashboard.
+* **Approval panel**: dashboard admin menampilkan daftar izin yang menunggu persetujuan.
+* **PWA support**: manifest dan ikon PWA sudah ditambahkan.
+* **Deployment notes**: file `vercel.json`, `README.deploy.md`, dan `.env.production.example` sudah dibuat.
+
+## 🔜 Fitur yang Masih Dalam Roadmap
+
+* Multi-tenant routing yang benar-benar dinamis per sekolah
+* Push notification real-time ke orang tua
+* Selfie + geofencing verification yang lebih lengkap
+* Billing, package, dan tenant management untuk SaaS
+* Audit trail sistem yang lebih matang untuk seluruh aktivitas admin
 
 ---
 
@@ -48,7 +66,7 @@
 | Komponen | Teknologi | Deskripsi |
 | :--- | :--- | :--- |
 | **IDE / Versioning** | VS Code + GitHub | Pengembangan lokal & otomatisasi CI/CD via GitHub Actions. |
-| **Framework Frontend** | Next.js 15 (App Router) + React | Web application framework dengan React Server Components (RSC). |
+| **Framework Frontend** | Next.js 16.3.4 (App Router) + React 19.2.8 | Web application framework dengan App Router dan React terbaru. |
 | **PWA & Push Notification** | Serwist + Web Push API | Service Worker management, offline caching, PWA Manifest, & VAPID Push Alert. |
 | **Edge Runtime / Hosting** | Cloudflare Workers & Pages | Runtime tanpa server di lokasi terdekat pengguna (ultra low latency). |
 | **Database & Auth** | Supabase (PostgreSQL) | Managed Postgres DB + Supabase Auth + Realtime WebSockets. |
@@ -336,6 +354,8 @@ TURNSTILE_SECRET_KEY=your-turnstile-secret-key
 
 ## 📄 Lisensi
 
-Proyek ini dilisensikan di bawah **MIT License** — Anda bebas menggunakan, memodifikasi, dan mendistribusikan kode ini untuk kepentingan komersial maupun non-komersial.#   p r e s e n s i k u - a p p  
- #   p r e s e n s i k u - a p p  
+Proyek ini dilisensikan di bawah **MIT License** — Anda bebas menggunakan, memodifikasi, dan mendistribusikan kode ini untuk kepentingan komersial maupun non-komersial.#   p r e s e n s i k u - a p p 
+ 
+ #   p r e s e n s i k u - a p p 
+ 
  
